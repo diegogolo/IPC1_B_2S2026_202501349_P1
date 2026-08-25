@@ -1,10 +1,10 @@
 package controller;
-import model.MainModel;
-import view.MainView;
-public class MainController {
+import model.modelRefugio;
+import view.viewRefugio;
+public class controllerRefugio {
     public static void main(String[] args){
-        MainModel modelo = new MainModel();
-        MainView view = new MainView();
+        modelRefugio modelo = new modelRefugio();
+        viewRefugio view = new viewRefugio();
 
         String key = view.password();
         boolean pasa = modelo.user(key);

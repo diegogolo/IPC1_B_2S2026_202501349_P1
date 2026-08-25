@@ -1,8 +1,7 @@
 package view;
 import java.util.Scanner;
-public class MainView {
+public class viewRefugio {
     private Scanner read = new Scanner(System.in);
-
     public String password(){
         return read.nextLine();
     }
