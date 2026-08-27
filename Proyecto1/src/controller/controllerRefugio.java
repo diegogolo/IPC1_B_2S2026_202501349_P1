@@ -1,6 +1,7 @@
 package controller;
 import model.modelRefugio;
 import view.viewRefugio;
+
 public class controllerRefugio {
     public static void main(String[] args){
         modelRefugio modelo = new modelRefugio();

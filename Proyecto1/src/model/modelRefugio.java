@@ -1,20 +1,14 @@
 package model;
-import view.viewRefugio;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
 public class modelRefugio {
-    public String id;
-    public String name;
-    public String especie;
-    public int edad;
-    public String estado;
-    public boolean activo;
-
-    viewRefugio vista = new viewRefugio();
+    private Animal animales;
+    public modelRefugio() {
+        animales = new Animal();
+    }
 
     public boolean user(String match) {
         try {
@@ -32,42 +26,5 @@ public class modelRefugio {
             System.out.println(e.getMessage());
         }
         return false;
-    }
-
-    public String getId() {
-        return id;
-    }
-    public void setId(String id) {
-        this.id = id;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name=name;
-    }
-    public String getEspecie() {
-        return especie;
-    }
-    public void setEspecie(String especie) {
-        this.especie = especie;
-    }
-    public int getEdad() {
-        return edad;
-    }
-    public void setEdad(int edad) {
-        this.edad=edad;
-    }
-    public String getEstado() {
-        return estado;
-    }
-    public void setEstado(String estado) {
-        this.estado=estado;
-    }
-    public boolean getActivo() {
-        return activo;
-    }
-    public void setActivo(boolean activo) {
-        this.activo = activo;
     }
 }
