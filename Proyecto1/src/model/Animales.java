@@ -61,6 +61,7 @@ public class Animales {
         }
         return false;
     }
+    //declarar una variable para filtrar los que no están activos
     public Animal[] listar(){
        Animal[] activos = new Animal[total];
        int imprimir=0;
