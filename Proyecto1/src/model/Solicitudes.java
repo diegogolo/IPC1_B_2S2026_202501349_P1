@@ -1,7 +1,7 @@
 package model;
 
 public class Solicitudes {
-    private Solicitud[] solicitudes = new Solicitud[50];
+    private Solicitud[] solicitudes = new Solicitud[100];
     int totalSolicitudes = 0;
 
     public boolean registro(Solicitud soli) {

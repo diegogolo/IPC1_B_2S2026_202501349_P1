@@ -1,7 +1,7 @@
 package model;
 
 public class Animales {
-    private Animal[] animales = new Animal[50];
+    private Animal[] animales = new Animal[100];
     private int total = 0;
     public boolean registro(Animal nuevo) {
         if (total >= animales.length) {

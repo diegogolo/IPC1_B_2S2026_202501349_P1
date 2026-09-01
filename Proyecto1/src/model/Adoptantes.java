@@ -1,7 +1,7 @@
 package model;
 
 public class Adoptantes {
-    private Adoptante[] adoptantes = new Adoptante[50];
+    private Adoptante[] adoptantes = new Adoptante[100];
     private int totalAdoptantes=0;
 
     public boolean adoptanteNuevo(Adoptante nuevo){
