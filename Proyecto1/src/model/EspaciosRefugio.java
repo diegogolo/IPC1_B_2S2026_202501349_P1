@@ -2,8 +2,6 @@ package model;
 
 public class EspaciosRefugio {
     private Espacio[][] refugio = new Espacio[10][10];
-    private int contador =0;
-
     public EspaciosRefugio(){
         for(int i=0; i<10; i++){
             for(int j=0; j<10; j++){
@@ -29,6 +27,17 @@ public class EspaciosRefugio {
         }else{
             return false;
         }
+    }
+    public int espaciosOcupados(){
+        int contadordeEspacios = 0;
+        for(int i=0; i<10;i++){
+            for(int j=0; j<10; j++){
+                if(refugio[i][j].getOccupied()==true){
+                    contadordeEspacios++;
+                }
+            }
+        }
+        return contadordeEspacios;
     }
 
 }
