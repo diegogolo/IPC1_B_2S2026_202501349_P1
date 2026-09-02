@@ -12,4 +12,23 @@ public class EspaciosRefugio {
             }
         }
     }
+    public boolean asignacion(int f, int c, String idAnimal){
+     if(refugio[f][c].getOccupied()==true){
+         return false;
+     }else{
+         refugio[f][c].setOccupied(true);
+         refugio[f][c].setIdAnimal(idAnimal);
+         return true;
+     }
+    }
+    public boolean liberarEspacio(int f, int c){
+        if(refugio[f][c].getOccupied()==true){
+            refugio[f][c].setOccupied(false);
+            refugio[f][c].setIdAnimal(null);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }

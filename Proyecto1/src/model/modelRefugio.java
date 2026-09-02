@@ -5,16 +5,18 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class modelRefugio {
-    private Animal animales;
+    private Animales animales;
     private Adoptantes adoptante;
     private Rescates rescate;
     private EspaciosRefugio espacios;
+    private Solicitudes solicitud;
 
     public modelRefugio() {
-        animales = new Animal();
+        animales = new Animales();
         adoptante = new Adoptantes();
         rescate = new Rescates();
         espacios = new EspaciosRefugio();
+        solicitud = new Solicitudes();
     }
 
     public boolean user(String match) {
