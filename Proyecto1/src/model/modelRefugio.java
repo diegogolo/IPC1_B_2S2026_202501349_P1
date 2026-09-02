@@ -6,8 +6,15 @@ import java.io.IOException;
 
 public class modelRefugio {
     private Animal animales;
+    private Adoptantes adoptante;
+    private Rescates rescate;
+    private EspaciosRefugio espacios;
+
     public modelRefugio() {
         animales = new Animal();
+        adoptante = new Adoptantes();
+        rescate = new Rescates();
+        espacios = new EspaciosRefugio();
     }
 
     public boolean user(String match) {
