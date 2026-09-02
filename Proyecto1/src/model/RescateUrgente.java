@@ -12,6 +12,7 @@ public class RescateUrgente {
     public void setIdRescate(String idRescate) {
         this.idRescate = idRescate;
     }
+    //caso es para la información de qué le pasó al animal recordar de usarla más adelante*****
     public String getCaso() {
         return caso;
     }
