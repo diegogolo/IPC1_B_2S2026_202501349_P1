@@ -10,4 +10,10 @@ public class Espacio {
     public void setIdAnimal(String idAnimal){
         this.idAnimal=idAnimal;
     }
+    public boolean getOccupied(){
+        return occupied;
+    }
+    public void setOccupied(boolean occupied){
+        this.occupied=occupied;
+    }
 }
