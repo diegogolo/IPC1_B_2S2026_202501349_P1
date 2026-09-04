@@ -15,9 +15,11 @@ public class controllerRefugio {
         boolean pasa = modelo.user(key);
         if(pasa == true && modelo.getTipoUser()==1){
             view.showMensaje("Bienvenido, Usuario Auxiliar");
+            view.mostrarPaneles("Menu");
         }
         if(pasa == true && modelo.getTipoUser()==0){
             view.showMensaje("Bienvenido, Usuario Administrador");
+            view.mostrarPaneles("Menu");
         }
         if(!pasa){
             view.showMensaje("Incorrecto");

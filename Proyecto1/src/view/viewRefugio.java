@@ -13,12 +13,20 @@ public class viewRefugio {
     }
     JPasswordField pass;
     public viewRefugio(){
-        frame.setTitle("Login");
+        frame.setTitle("Centro de Rescate Animal");
         frame.setSize(600,400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(new GridLayout(2,2));
-        JLabel name = new JLabel("Centro de Rescate Animal");
-        name.setHorizontalAlignment(SwingConstants.CENTER);
+        frame.setLayout(new CardLayout());
+        frame.add(panelLogin(), "Login");
+        frame.add(mainMenu(), "Menu");
+        frame.setVisible(true);
+    }
+    public void mostrarPaneles(String Panel){
+        CardLayout cl = (CardLayout) frame.getContentPane().getLayout();
+        cl.show(frame.getContentPane(), Panel);
+    }
+    public JPanel panelLogin(){
+        JPanel panelLog = new JPanel(new GridLayout(2,1));
         JLabel tag = new JLabel("Contraseña");
         tag.setHorizontalAlignment(SwingConstants.CENTER);
         pass = new JPasswordField();
@@ -27,17 +35,20 @@ public class viewRefugio {
         boton.addActionListener(e ->{
             controller.validarLogin();
         });
-        frame.add(name);
-        frame.add(tag);
-        frame.add(pass);
-        frame.add(boton);
-
-        frame.setVisible(true);
+        panelLog.add(tag);
+        panelLog.add(pass);
+        panelLog.add(boton);
+        return panelLog;
     }
     public void showMensaje(String mensaje){
         JOptionPane.showMessageDialog(frame,mensaje);
     }
     public String getPassword(){
         return new String(pass.getPassword());
+    }
+
+    public JPanel mainMenu(){
+        JPanel menu = new JPanel(new GridLayout(2,2));
+        return menu;
     }
 }
