@@ -10,6 +10,10 @@ public class modelRefugio {
     private Rescates rescate;
     private EspaciosRefugio espacios;
     private Solicitudes solicitud;
+    private int tipoUser=-1;
+    public int getTipoUser(){
+        return tipoUser;
+    }
 
     public modelRefugio() {
         animales = new Animales();
@@ -26,6 +30,7 @@ public class modelRefugio {
             for (int i = 0; i < 2; i++) {
                 line = br.readLine();
                 if (line != null && line.equals(match)) {
+                    tipoUser=i;
                     return true;
                 }
             }

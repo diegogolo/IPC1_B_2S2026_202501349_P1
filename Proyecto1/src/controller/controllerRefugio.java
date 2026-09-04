@@ -13,10 +13,15 @@ public class controllerRefugio {
     public void validarLogin(){
         String key = view.getPassword();
         boolean pasa = modelo.user(key);
-        if(pasa == true){
-            view.showMensaje("Bienvenido");
-        }else{
+        if(pasa == true && modelo.getTipoUser()==1){
+            view.showMensaje("Bienvenido, Usuario Auxiliar");
+        }
+        if(pasa == true && modelo.getTipoUser()==0){
+            view.showMensaje("Bienvenido, Usuario Administrador");
+        }
+        if(!pasa){
             view.showMensaje("Incorrecto");
         }
+
     }
 }
