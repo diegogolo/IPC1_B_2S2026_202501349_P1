@@ -3,15 +3,18 @@ import model.modelRefugio;
 import view.viewRefugio;
 
 public class controllerRefugio {
+    modelRefugio modelo = new modelRefugio();
+    viewRefugio view = new viewRefugio();
+
     public static void main(String[] args){
-        modelRefugio modelo = new modelRefugio();
-        viewRefugio view = new viewRefugio();
-
-        String key = view.password();
+        controllerRefugio app = new controllerRefugio();
+        app.view.setController(app);
+    }
+    public void validarLogin(){
+        String key = view.getPassword();
         boolean pasa = modelo.user(key);
-
-        if (pasa){
-            view.showMensaje("Correcto");
+        if(pasa == true){
+            view.showMensaje("Bienvenido");
         }else{
             view.showMensaje("Incorrecto");
         }
