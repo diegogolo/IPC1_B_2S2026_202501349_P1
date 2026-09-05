@@ -5,6 +5,7 @@ import java.awt.*;
 public class MainMenu extends JPanel {
     private MainFrame mainframe;
     public MainMenu (MainFrame mainframe){
+        this.mainframe=mainframe;
         JButton boton1 = new JButton("Animales");
         boton1.addActionListener( e-> {
             mainframe.mostrarPaneles("Animales");
