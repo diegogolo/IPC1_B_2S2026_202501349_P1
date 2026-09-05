@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.Scanner;
 import javax.swing.*;
 
-public class viewRefugio {
+public class MainFrame {
     final private Scanner read = new Scanner(System.in);
     JFrame frame = new JFrame();
     private controllerRefugio controller;
@@ -12,13 +12,13 @@ public class viewRefugio {
         this.controller = controller;
     }
     JPasswordField pass;
-    public viewRefugio(){
+    public MainFrame(){
         frame.setTitle("Centro de Rescate Animal");
         frame.setSize(600,400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new CardLayout());
         frame.add(panelLogin(), "Login");
-        frame.add(mainMenu(), "Menu");
+        frame.add(new MainMenu(this), "Menu");
         frame.add(animales(), "Animales");
         frame.setVisible(true);
     }
@@ -47,47 +47,7 @@ public class viewRefugio {
     public String getPassword(){
         return new String(pass.getPassword());
     }
-        //animales, adoptantes, solicitudes, rescates, ubicaciones, reportes y datos (7)
-    public JPanel mainMenu(){
-        JPanel menu = new JPanel(new GridLayout(5, 2));
-        JButton boton1 = new JButton("Animales");
-        boton1.addActionListener( e-> {
-            mostrarPaneles("Animales");
-        });
-        menu.add(boton1);
 
-        JButton boton2 = new JButton("Adoptantes");
-        boton2.addActionListener( e-> {
-            mostrarPaneles("Adoptantes");
-        });
-        menu.add(boton2);
-        JButton boton3 = new JButton("Solicitudes");
-        boton3.addActionListener( e-> {
-            mostrarPaneles("Solicitudes");
-        });
-        menu.add(boton3);
-        JButton boton4 = new JButton("Rescates");
-        boton4.addActionListener( e-> {
-            mostrarPaneles("Rescates");
-        });
-        menu.add(boton4);
-        JButton boton5 = new JButton("Ubicaciones");
-        boton5.addActionListener( e-> {
-            mostrarPaneles("Ubicaciones");
-        });
-        menu.add(boton5);
-        JButton boton6 = new JButton("Reportes");
-        boton6.addActionListener( e-> {
-            mostrarPaneles("Reportes");
-        });
-        menu.add(boton6);
-        JButton boton7 = new JButton("Datos del Estudiante");
-        boton7.addActionListener( e-> {
-            mostrarPaneles("Datos del estudiante");
-        });
-        menu.add(boton7);
-        return menu;
-    }
     JTextField campo_id, campo_name, campo_especie, campo_edad, campo_estado;
     public JPanel animales(){
         JPanel mod_animales = new JPanel(new GridLayout(7,2));

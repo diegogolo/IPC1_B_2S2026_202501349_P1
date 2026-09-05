@@ -1,10 +1,10 @@
 package controller;
 import model.modelRefugio;
-import view.viewRefugio;
+import view.MainFrame;
 
 public class controllerRefugio {
     modelRefugio modelo = new modelRefugio();
-    viewRefugio view = new viewRefugio();
+    MainFrame view = new MainFrame();
 
     public static void main(String[] args){
         controllerRefugio app = new controllerRefugio();
