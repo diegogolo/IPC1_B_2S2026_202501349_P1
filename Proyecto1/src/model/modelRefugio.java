@@ -41,4 +41,7 @@ public class modelRefugio {
         }
         return false;
     }
+    public boolean registrarAnimal(Animal nuevo){
+        return animales.registro(nuevo);
+    }
 }

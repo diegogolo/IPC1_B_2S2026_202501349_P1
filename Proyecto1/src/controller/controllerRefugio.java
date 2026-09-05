@@ -24,6 +24,8 @@ public class controllerRefugio {
         if(!pasa){
             view.showMensaje("Incorrecto");
         }
+    }
+    public void registrarAnimal(){
 
     }
 }
